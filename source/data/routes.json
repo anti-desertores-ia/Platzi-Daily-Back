@@ -1,0 +1,7 @@
+{
+    "GET": {
+        "/users": "get_users",
+        "/user": "get_user",
+        "/ranking": "get_ranking"
+    }
+}

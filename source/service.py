@@ -8,10 +8,13 @@ from source.model import User
 class UserData:
     collection: Collection
 
+    DATABASE_NAME = "platzi_daily"
     USER_COLLECTION_NAME = "users"
 
     def __init__(self):
-        self.collection = MONGO_HANDLER.collection(self.USER_COLLECTION_NAME)
+        self.collection = MONGO_HANDLER.collection(
+            self.DATABASE_NAME, self.USER_COLLECTION_NAME
+        )
 
     def get_users(self) -> List[User]:
         users = []

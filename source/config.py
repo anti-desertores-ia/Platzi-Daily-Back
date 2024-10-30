@@ -1,6 +1,10 @@
+import logging
+
 from pymongo import MongoClient
 from pymongo.collection import Collection
 from pydantic import BaseSettings
+
+LOGGER = logging.getLogger()
 
 
 class Settings(BaseSettings):
