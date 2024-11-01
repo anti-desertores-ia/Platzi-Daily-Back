@@ -1,0 +1,166 @@
+{
+    "users": [
+        {
+            "username": "laurab123",
+            "name": "Laura",
+            "thumbnail": "https://example.com/images/laura.jpg",
+            "stats": {
+                "points": 45,
+                "streak_days": [
+                    { "dt": 1730580000 },
+                    { "dt": 1730666400 }
+                ],
+                "train_days": 12,
+                "cover_days": [
+                    { "dt": 1730580000 },
+                    { "dt": 1730666400 }
+                ]
+            },
+            "courses": [
+                {
+                    "id": "course_2",
+                    "name": "JavaScript",
+                    "thumbnail": "https://example.com/images/js_course.jpg",
+                    "school_ids": ["school_3", "school_4"],
+                    "resource_id": "resource_2"
+                }
+            ],
+            "paths": [
+                {
+                    "id": "path_2",
+                    "name": "JavaScript Path",
+                    "thumbnail": "https://example.com/images/js_path.jpg"
+                }
+            ]
+        },
+        {
+            "username": "michaelT",
+            "name": "Michael",
+            "thumbnail": "https://example.com/images/michael.jpg",
+            "stats": {
+                "points": 20,
+                "streak_days": [
+                    { "dt": 1730738400 }
+                ],
+                "train_days": 5,
+                "cover_days": [
+                    { "dt": 1730738400 }
+                ]
+            },
+            "courses": [
+                {
+                    "id": "course_3",
+                    "name": "Data Science",
+                    "thumbnail": "https://example.com/images/ds_course.jpg",
+                    "school_ids": ["school_5"],
+                    "resource_id": "resource_3"
+                }
+            ],
+            "paths": [
+                {
+                    "id": "path_3",
+                    "name": "Data Science Path",
+                    "thumbnail": "https://example.com/images/ds_path.jpg"
+                }
+            ]
+        },
+        {
+            "username": "emily_r",
+            "name": "Emily",
+            "thumbnail": "https://example.com/images/emily.jpg",
+            "stats": {
+                "points": 65,
+                "streak_days": [
+                    { "dt": 1730491322 },
+                    { "dt": 1730577722 },
+                    { "dt": 1730664122 }
+                ],
+                "train_days": 15,
+                "cover_days": [
+                    { "dt": 1730491322 },
+                    { "dt": 1730577722 }
+                ]
+            },
+            "courses": [
+                {
+                    "id": "course_4",
+                    "name": "Machine Learning",
+                    "thumbnail": "https://example.com/images/ml_course.jpg",
+                    "school_ids": ["school_1", "school_6"],
+                    "resource_id": "resource_4"
+                }
+            ],
+            "paths": [
+                {
+                    "id": "path_4",
+                    "name": "Machine Learning Path",
+                    "thumbnail": "https://example.com/images/ml_path.jpg"
+                }
+            ]
+        },
+        {
+            "username": "jonathan98",
+            "name": "Jonathan",
+            "thumbnail": "https://example.com/images/jonathan.jpg",
+            "stats": {
+                "points": 10,
+                "streak_days": [
+                    { "dt": 1730824800 }
+                ],
+                "train_days": 3,
+                "cover_days": [
+                    { "dt": 1730824800 }
+                ]
+            },
+            "courses": [
+                {
+                    "id": "course_5",
+                    "name": "Web Development",
+                    "thumbnail": "https://example.com/images/webdev_course.jpg",
+                    "school_ids": ["school_2"],
+                    "resource_id": "resource_5"
+                }
+            ],
+            "paths": [
+                {
+                    "id": "path_5",
+                    "name": "Web Development Path",
+                    "thumbnail": "https://example.com/images/webdev_path.jpg"
+                }
+            ]
+        },
+        {
+            "username": "amandalee",
+            "name": "Amanda",
+            "thumbnail": "https://example.com/images/amanda.jpg",
+            "stats": {
+                "points": 55,
+                "streak_days": [
+                    { "dt": 1730491322 },
+                    { "dt": 1730577722 }
+                ],
+                "train_days": 10,
+                "cover_days": [
+                    { "dt": 1730491322 },
+                    { "dt": 1730577722 }
+                ]
+            },
+            "courses": [
+                {
+                    "id": "course_6",
+                    "name": "Cybersecurity",
+                    "thumbnail": "https://example.com/images/cybersec_course.jpg",
+                    "school_ids": ["school_7", "school_8"],
+                    "resource_id": "resource_6"
+                }
+            ],
+            "paths": [
+                {
+                    "id": "path_6",
+                    "name": "Cybersecurity Path",
+                    "thumbnail": "https://example.com/images/cybersec_path.jpg"
+                }
+            ]
+        }
+    ]
+}

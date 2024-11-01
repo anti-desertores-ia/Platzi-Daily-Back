@@ -44,3 +44,13 @@ class UserData:
             users.append(User.parse_obj(doc))
 
         return users
+
+    def insert_user(self, user: User) -> str:
+        response = self.collection.insert_one(user.dict(exclude_none=True))
+        return response.inserted_id
+
+    def insert_user_bulk(self, users: List[User]):
+        response = self.collection.insert_many(
+            [user.dict(exclude_none=True) for user in users]
+        )
+        return response

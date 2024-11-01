@@ -6,7 +6,6 @@ class Path(BaseModel):
     id: str
     name: str
     thumbnail: str
-    school_ids: List[str]
 
 
 class CourseResource(BaseModel):
