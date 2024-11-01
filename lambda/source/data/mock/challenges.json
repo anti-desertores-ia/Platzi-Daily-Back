@@ -1,0 +1,92 @@
+[
+    {
+        "id": "challenge_1",
+        "name": "Social Media Strategy",
+        "description": "Develop a strategy for increasing engagement on a fictional brand's social media accounts.",
+        "created_at": 1693520000,
+        "duration_sec": 2400,
+        "resource_id": "resource_1",
+        "award_points": 150
+    },
+    {
+        "id": "challenge_2",
+        "name": "SEO Fundamentals",
+        "description": "Optimize a webpage for search engines, focusing on keywords, meta descriptions, and headings.",
+        "created_at": 1693523600,
+        "duration_sec": 1800,
+        "resource_id": "resource_2",
+        "award_points": 120
+    },
+    {
+        "id": "challenge_3",
+        "name": "Python Basics",
+        "description": "Write basic Python scripts to solve given coding problems.",
+        "created_at": 1693527200,
+        "duration_sec": 3600,
+        "resource_id": "resource_3",
+        "award_points": 180
+    },
+    {
+        "id": "challenge_4",
+        "name": "Grammar Perfection",
+        "description": "Identify and correct grammatical errors in sentences.",
+        "created_at": 1693530800,
+        "duration_sec": 1500,
+        "resource_id": "resource_4",
+        "award_points": 100
+    },
+    {
+        "id": "challenge_5",
+        "name": "Intro to Neural Networks",
+        "description": "Understand the basics of neural networks and complete simple tasks using machine learning models.",
+        "created_at": 1693534400,
+        "duration_sec": 2400,
+        "resource_id": "resource_5",
+        "award_points": 200
+    },
+    {
+        "id": "challenge_6",
+        "name": "Graphic Design Basics",
+        "description": "Create a visually appealing poster using design principles.",
+        "created_at": 1693538000,
+        "duration_sec": 2700,
+        "resource_id": "resource_6",
+        "award_points": 130
+    },
+    {
+        "id": "challenge_7",
+        "name": "Financial Literacy",
+        "description": "Solve budgeting and investment problems to improve financial decision-making.",
+        "created_at": 1693541600,
+        "duration_sec": 2100,
+        "resource_id": "resource_7",
+        "award_points": 150
+    },
+    {
+        "id": "challenge_8",
+        "name": "Digital Marketing Analytics",
+        "description": "Analyze a fictional brand's digital marketing data and derive insights.",
+        "created_at": 1693545200,
+        "duration_sec": 2000,
+        "resource_id": "resource_8",
+        "award_points": 180
+    },
+    {
+        "id": "challenge_9",
+        "name": "Advanced SQL Queries",
+        "description": "Write SQL queries to extract and analyze data from a database.",
+        "created_at": 1693548800,
+        "duration_sec": 3000,
+        "resource_id": "resource_9",
+        "award_points": 250
+    },
+    {
+        "id": "challenge_10",
+        "name": "Creative Writing",
+        "description": "Write a short story using a given prompt.",
+        "created_at": 1693552400,
+        "duration_sec": 1800,
+        "resource_id": "resource_10",
+        "award_points": 140
+    }
+]
