@@ -1,7 +1,11 @@
 {
     "GET": {
         "/users": "get_users",
-        "/user": "get_user",
         "/ranking": "get_ranking"
+    },
+    "POST": {
+        "/user": "get_user",
+        "/challenges/user": "get_challenge_by_user",
+        "/challenges/user/random": "get_random_challenge_by_user"
     }
 }

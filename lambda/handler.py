@@ -11,16 +11,24 @@ def lambda_handler(event: dict, context: Any):
 
     try:
         path = event.get("path", "")
-        method = event.get("method", "")
-        body = json.loads(event.get("body", "{}"))
+        method = event.get("httpMethod", "")
+        body = event.get("body", "{}")
+        body = json.loads(body) if body else {}
 
         result = router(path=path, method=method, **body)
     except Exception as e:
         LOGGER.error(f"Something went wrong: {e}")
 
-    return json.dumps(
-        {"statusCode": 200 if result is not None else 500, "body": result}
-    )
+    return {
+        "statusCode": 200 if result is not None else 500,
+        "body": json.dumps(result),
+        "headers": {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type",
+        },
+    }
 
 
 def router(path: str, method: str, *args, **kwargs) -> dict:
