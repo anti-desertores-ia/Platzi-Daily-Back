@@ -18,7 +18,9 @@ class MongoHandler:
     def __init__(self):
         self.settings = Settings()
         self.client = MongoClient(
-            get_secure_string_ssm_param(self.settings.mongo_connection_string_param_name)
+            get_secure_string_ssm_param(
+                self.settings.mongo_connection_string_param_name
+            )
         )
 
     def collection(self, db_name: str, collection_name: str) -> Collection:
