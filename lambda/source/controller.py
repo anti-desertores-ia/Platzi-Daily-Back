@@ -1,4 +1,4 @@
-from source.service import UserData, UserChallenge
+from source.service import UserData, UserChallengeData, ChallengeData
 from source.config import LOGGER
 
 from pydantic import BaseSettings
@@ -47,24 +47,38 @@ def get_user(username: str, *args, **kwargs):
     return response
 
 
-def get_challenge_by_user(username: str, *args, **kwargs):
+def get_challenges(*args, **kwargs):
     response = None
 
     try:
-        user_challenges = UserChallenge().get_challenges(username=username)
-        response = dict(response=user_challenges.dict(exclude_none=True))
+        challenges = ChallengeData().get_challenges()
+        response = dict(
+            response=[challenge.dict(exclude_none=True) for challenge in challenges]
+        )
+    except Exception as e:
+        LOGGER.error(f"Couldnt retrieve challenges: {e}")
+
+    return response
+
+
+def get_challenges_by_user(username: str, *args, **kwargs):
+    response = None
+
+    try:
+        user_challenges = UserChallengeData().get_challenges(username=username)
+        response = dict(response=[uc.dict(exclude_none=True) for uc in user_challenges])
     except Exception as e:
         LOGGER.error(f"Couldnt retrieve challenges for {username}: {e}")
 
     return response
 
 
-def get_random_challenge_by_user(username: str, *args, **kwargs):
+def get_random_challenges_by_user(username: str, *args, **kwargs):
     response = None
 
     try:
-        user_challenges = UserChallenge().get_random_challenge(username=username)
-        response = dict(response=user_challenges.dict(exclude_none=True))
+        user_challenge = UserChallengeData().get_random_challenge(username=username)
+        response = dict(response=user_challenge.dict(exclude_none=True))
     except Exception as e:
         LOGGER.error(f"Couldnt retrieve random challenge for {username}: {e}")
 

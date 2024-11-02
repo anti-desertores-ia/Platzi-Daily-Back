@@ -1,0 +1,27 @@
+[
+    {
+        "id": "userchallenge_1",
+        "user_id": "laurab123",
+        "challenge_ids": ["challenge_1", "challenge_3", "challenge_5"]
+    },
+    {
+        "id": "userchallenge_2",
+        "user_id": "michaelT",
+        "challenge_ids": ["challenge_2", "challenge_8", "challenge_9"]
+    },
+    {
+        "id": "userchallenge_3",
+        "user_id": "emily_r",
+        "challenge_ids": ["challenge_3", "challenge_5", "challenge_10"]
+    },
+    {
+        "id": "userchallenge_4",
+        "user_id": "jonathan98",
+        "challenge_ids": ["challenge_1", "challenge_4", "challenge_7"]
+    },
+    {
+        "id": "userchallenge_5",
+        "user_id": "amandalee",
+        "challenge_ids": ["challenge_6", "challenge_8", "challenge_10"]
+    }
+]

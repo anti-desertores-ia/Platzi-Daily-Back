@@ -1,5 +1,5 @@
-from source.model import User, Challenge
-from source.service import UserData, ChallengeData
+from source.model import User, Challenge, UserChallenges
+from source.service import UserData, ChallengeData, UserChallengeData
 from source.utils import get_json_dict
 
 
@@ -23,7 +23,24 @@ def add_challenges():
     print("CHALLENGES:", ChallengeData().insert_challenge_bulk(users))
 
 
-options = {"users": add_users, "challenges": add_challenges}
+def add_user_challenges():
+    mock_data = get_json_dict("source/data/mock/user_challenge.json")
+    user_challenges = []
+
+    for user in mock_data or []:
+        user_challenges.append(UserChallenges.parse_obj(user))
+
+    print(
+        "USER CHALLENGES:",
+        UserChallengeData().insert_user_challenges_bulk(user_challenges),
+    )
+
+
+options = {
+    "users": add_users,
+    "challenges": add_challenges,
+    "user_challenges": add_user_challenges,
+}
 
 if __name__ == "__main__":
     for key in options:

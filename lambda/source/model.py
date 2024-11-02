@@ -3,43 +3,43 @@ from pydantic import BaseModel
 
 
 class Path(BaseModel):
-    id: str
-    name: str
-    thumbnail: str
+    id: Optional[str]
+    name: Optional[str]
+    thumbnail: Optional[str]
 
 
 class CourseResource(BaseModel):
-    id: str
-    archive: str
+    id: Optional[str]
+    archive: Optional[str]
 
 
 class Course(BaseModel):
-    id: str
-    name: str
-    thumbnail: str
-    school_ids: List[str]
-    resource_id: str
+    id: Optional[str]
+    name: Optional[str]
+    thumbnail: Optional[str]
+    school_ids: Optional[List[str]]
+    resource_id: Optional[str]
 
 
 class School(BaseModel):
-    id: str
-    name: str
-    thumbnail: str
+    id: Optional[str]
+    name: Optional[str]
+    thumbnail: Optional[str]
 
 
 class StreakDay(BaseModel):
-    dt: int
+    dt: Optional[int]
 
 
 class DayCover(BaseModel):
-    dt: int
+    dt: Optional[int]
 
 
 class Stats(BaseModel):
-    points: int
-    streak_days: List[StreakDay]
-    train_days: int
-    cover_days: List[DayCover]
+    points: Optional[int]
+    streak_days: Optional[List[StreakDay]]
+    train_days: Optional[int]
+    cover_days: Optional[List[DayCover]]
 
 
 class User(BaseModel):
@@ -52,21 +52,21 @@ class User(BaseModel):
 
 
 class ChallengeResource(BaseModel):
-    id: str
-    archive: str
+    id: Optional[str]
+    archive: Optional[str]
 
 
 class Challenge(BaseModel):
-    id: str
-    name: str
-    description: str
-    created_at: int
-    duration_sec: int
-    resource_id: str
-    award_points: int
+    id: Optional[str]
+    name: Optional[str]
+    description: Optional[str]
+    created_at: Optional[int]
+    duration_sec: Optional[int]
+    resource_id: Optional[str]
+    award_points: Optional[int]
 
 
 class UserChallenges(BaseModel):
-    id: str
-    user_id: str
-    challenge_ids: List[str]
+    id: Optional[str]
+    user_id: Optional[str]
+    challenge_ids: Optional[List[str]]

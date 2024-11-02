@@ -66,7 +66,16 @@ class ChallengeData(DataCollection):
 
     def get_challenges(self) -> List[Challenge]:
         challenges = []
-        response = self.collection.find({}, {"id": 1, "name": 1, "description": 1})
+        response = self.collection.find({}, {"id": 1, "name": 1})
+
+        for doc in response:
+            challenges.append(Challenge.parse_obj(doc))
+
+        return challenges
+
+    def get_challenges_by_ids(self, ids: List[str]) -> List[Challenge]:
+        challenges = []
+        response = self.collection.find({"id": {"$in": ids}})
 
         for doc in response:
             challenges.append(Challenge.parse_obj(doc))
@@ -89,23 +98,21 @@ class ChallengeData(DataCollection):
         return response
 
 
-class UserChallenge(DataCollection):
+class UserChallengeData(DataCollection):
     COLLECTION_NAME = "user_challenges"
 
     def get_challenges(self, username: str) -> List[UserChallenges]:
-        challenges = []
-        response = self.collection.find(
-            {"username": username}, {"id": 1, "challenge_ids": 1}
+        response = self.collection.find_one(
+            {"user_id": username}, {"id": 1, "challenge_ids": 1}
         )
 
-        for doc in response:
-            challenges.append(UserChallenges.parse_obj(doc))
+        challenges_ids = UserChallenges.parse_obj(response).challenge_ids
 
-        return challenges
+        return ChallengeData().get_challenges_by_ids(challenges_ids)
 
     def get_random_challenge(self, username: str) -> Challenge:
         response = self.collection.find_one(
-            {"username": username}, {"id": 1, "challenge_ids": 1}
+            {"user_id": username}, {"id": 1, "challenge_ids": 1}
         )
 
         challenges_ids = UserChallenges.parse_obj(response).challenge_ids
